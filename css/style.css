@@ -1,0 +1,763 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+    overflow: auto;
+    top: 0;
+}
+
+.logo{
+    height: 100%;
+    width: 100px;
+    margin-left: 120px ;
+    float: left;
+}
+
+.header-menu{
+    float: right;
+    padding-right: 30px;
+}
+
+.header-menu a li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 35px; 
+    padding-top: 15px;
+    color: white;
+    position: relative;
+    height: 100%;
+}
+
+.header-menu a li:active{
+    color: rgb(136, 136, 136);
+}
+
+.header-menu a li:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 4px;
+    width: 0;
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+    margin-top:22px;
+}
+
+.header-menu a .li1-home:after{
+    width: 100%;
+}
+
+.header-menu a li:hover::after {
+    height: 4px;
+    width: 100%;
+    opacity: 1;
+    transition: 1s;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.home{
+    background-image: url(../images/pexels-noah-erickson-97554-404280.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.home-content .parent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.home-content .parent{
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+.home-content h2{
+    font-size: 70px;
+}
+
+.home-content p{
+    font-size: 20px;
+    margin-top: 25px;
+    color: rgb(179, 179, 179);
+}
+
+.home-content button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    font-size: 22px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.home-content .btn1 {
+    color: white;
+    background-color: red;
+}
+
+.home-content .btn2 {
+    color: red;
+    background-color: white; 
+}
+
+.home-content button:active {
+    opacity: 0.7;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.choose{
+    width: 100%;
+    height: 100vh;
+}
+
+.choose .head2{
+    padding-top: 10%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.chooseline{
+    width: 75px;
+    height: 4px;
+    background-color: black;
+    margin: auto;
+    margin-top: 5px;
+}
+.chooseparent{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 70px;
+    
+}
+
+.choosecontainer{
+    overflow: auto;
+    text-transform: capitalize;
+
+}
+
+.div1{
+    width: 30%;
+    float: left;
+    height: 230px;
+    text-align: center;
+    border: 1px solid black;
+    padding-top: 25px;
+    position: relative;
+}
+
+.div-mid{
+    margin: 0 5%;
+}
+
+.choosecontainer i{
+    font-size: 25px;
+    color:  rgb(125, 189, 254);
+}
+
+.choosecontainer h2{
+    font-size:30px ;
+    padding: 15px 0;
+}
+
+.choosecontainer span{
+    color: rgb(181, 181, 181);
+    padding: 0 10px;
+}
+
+.choosecontainer a {
+    font-size: 18px;
+    display: block;
+    padding-top: 25px;
+    text-decoration: none;
+    color:  rgb(125, 189, 254);
+}
+
+.div1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    transition: 1s;
+    background-color: black;
+    z-index: -1;
+    
+}
+
+.div1:hover::after{
+    height: 100%;
+    width: 100%;
+}
+.choosecontainer .div1:hover h2 {
+    color: white;
+    transition: 2s;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.best-seller{
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(220, 220, 220);
+}
+
+.best-seller img{
+    width: 90%;
+    height: 250px;
+    margin-top: 6%;
+}
+
+.best-seller h2{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 150px;
+}
+.best-seller-container{
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 70px;
+}
+    .best-seller .part {
+    float: left;
+    margin-top: 30px;
+    width: 30%;
+    height: 300px;
+    position: relative;
+}
+
+.best-seller .mid{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.best-seller .overlay{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
+.part:hover .overlay {
+    visibility: visible;
+}
+
+.best-seller .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.content a{
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 10px;
+    color: white;
+}
+
+.content a:active{
+    color: rgb(186, 186, 186);
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.divextra , .divextra-mid{
+    margin-bottom: 25px;
+    height: 180px;
+    overflow: auto;
+}
+
+.extracontainer i {
+    padding-top: 20px;
+}
+.extracontainer span{
+    margin-top: -25px;
+}
+
+.icondiv{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.content1{
+    width: 80%;
+    height: 100%;
+    float: left;
+    text-align: left;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.about-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(231, 231, 231);
+    overflow: auto;
+    text-transform: capitalize;
+}
+
+.about-content{
+    width: 40%;
+    height: 100%;
+    /* text-align: center; */
+    float: left;
+    padding-left: 150px;
+}
+
+.about-img{
+    width: 60%;
+    height: 100%;
+    /* text-align: center; */
+    float: left;
+}
+
+.aboutline{
+    width: 70px;
+    height: 4px;
+    background-color: blue;
+    margin-top: 5px;
+}
+
+.about-content h2{
+    margin-top: 150px;
+    font-size: 40px;
+}
+
+.about-content p{
+    padding-top: 30px;
+    font-size: 17px;
+    opacity: 0.3;
+}
+
+.about-content span , .about-content i {
+    font-size: 15;
+    padding-top: 20px;
+    opacity: 0.3;
+}
+.about-content i{
+    color: blue;
+    opacity: 1;
+}
+
+.about-img img{
+    height: 50vh;
+    width: 45%;
+    margin-top: 150px;
+    margin-left: 150px;
+}
+
+.about-img li {
+    float: left;
+    margin-top: 15px;
+    font-size: 30px;
+    
+}
+.li1{
+    margin-left: 320;
+    color: blue;
+}
+
+.li2{
+    margin: 0 30px;
+}
+
+.about-img li:hover{
+    color: blue;
+}
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.awards{
+    height: 50vh;
+    width: 100%;
+    background-image: url(../images/wallpaperflare.com_wallpaper\ \(2\).jpg);
+    background-attachment: fixed;
+}
+.awards-container{
+    width: 80%;
+    height: 50vh;
+    margin-left: 10%;
+    /* background-color: aqua; */
+    color: white;
+    overflow: auto;
+}
+.one{
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 150px;
+}
+ .one i{
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgb(132, 132, 231);
+ }
+
+ .one h2{
+    font-size: 30px;
+    padding-bottom: 3px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.pricing-container{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    background-color: rgb(207, 207, 207);
+}
+.pricing-container .head3{
+    font-size: 45px;
+}
+
+.pricing-parent{
+    width: 80%;
+    height: 50vh;
+    overflow: auto;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.prices{
+    float: left;
+    border: 1.5px solid rgb(152, 152, 152);
+    height: 45vh;
+    width: 30%;
+    padding-top: 20px;
+}
+.prices-mid{
+    margin: 0 5%;
+}
+
+.pricing-circle{
+    font-size: larger;
+    margin: auto;
+    padding-top: 18px;
+    border: 1px solid blue ;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.prices p{
+    padding-top: 10px;
+    opacity: 0.3;
+}
+.hhh{
+    opacity: 0.3;
+}
+.prices button{
+    padding: 15px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(183, 183, 183);
+    cursor: pointer;
+}
+
+.prices button:active{
+     opacity: 0.5;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.info-container{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    background-attachment: fixed;
+}
+
+.info-parent{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    padding-top: 150px;
+    overflow: auto;
+}
+
+.info{
+    float: left;
+    width: 40%;
+    color: white;
+    overflow: auto;
+    margin-right: 10%;
+}
+
+.info-content  {
+    float: left;
+    padding-top: 18px;
+    padding-left: 15px;
+}
+
+.info img{
+    border-radius: 50%;
+    width: 80px;
+    float: left;
+    height: 80px;
+
+}
+
+.p2{
+    color: rgb(145, 145, 254);
+    padding-top: 5px;
+}
+
+.info .p1{
+    font-size: 25px;
+}
+
+.p3{
+    margin-top: 100px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.team-section{
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background-color: rgb(224, 224, 224);
+    text-align: center;
+}
+
+.head4{
+    font-size: 45px;
+}
+
+.teamline{
+    background-color: blue;
+}
+
+.team-container{
+    width: 70%;
+    height: 300px;
+    overflow: auto;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.team{
+    width: 30%;
+    height: inherit;
+    background-color: aliceblue;
+    float: left;
+    padding: 10px;
+    padding-top: 20px;
+    position: relative;
+}
+.team-img{
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+.team-mid{
+    margin: 0 5%;
+}
+
+.team img{
+    width: 100%;
+    height: 75%;
+}
+
+.team .team-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 3;
+ }
+ .team-overlay a{
+    font-size: 20px;
+    margin-left: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: blue;
+}
+
+.team-overlay a:active{
+    opacity: 0.7;
+}
+
+.team-overlay a i{
+    line-height: 30px;
+}
+
+.team:hover .team-overlay {
+    visibility: visible;
+}
+
+.team-info{
+    padding-top: 7px;
+    font-size: 20px;
+}
+.team-p2{
+    opacity: 0.7;
+}
+
+.team::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: 1s;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.team:hover::after{
+    height: 100%;
+    width: 100%;
+}
+
+.team:hover .team-info{
+    color: rgb(153, 180, 0);
+    transition: 2s;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.news{
+    height: 100vh;
+    width: 100%;
+}
+
+.head5{
+    font-size: 45px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.news-container{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    margin-top: 10vh;
+    position: relative;
+}
+
+.news-parent{
+    padding-left: 30px;
+    width: 30%;
+    height: 68vh;
+    background-color: rgb(231, 242, 255);
+    float: left;
+    position: relative;
+}
+
+.news-mid{
+    margin: 0 5%;
+}
+
+.news-parent img{
+    width: 70%;
+    height: 50%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.news-parent i , .news-parent span {
+    color: rgb(96, 96, 222);
+    padding-left: 5px;
+}
+
+.news-parent h2{
+    color: blue;
+    padding: 15px 0;
+}
+.news-parent p{
+    color: rgb(179, 182, 255);
+    padding-bottom: 30px;
+}
+
+.news-parent a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.news-parent::after{
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(49, 70, 73);
+    opacity: 0.7;
+    transition: 1s;
+}
+
+.news-parent:hover::after{
+    height: 100%;
+    width: 100%;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.final{
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.final img {
+    width: 150px;
+    height: 100px;
+    margin-top: 10vh;
+    margin-bottom: 30px;
+}
+
+.links a{
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.final p{
+    margin-top: 30px;
+}
